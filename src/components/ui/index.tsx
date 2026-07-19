@@ -22,7 +22,7 @@ export function Card({
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] as const }}
       className={`relative rounded-2xl border border-white/10 bg-white/[0.03]
         backdrop-blur-xl shadow-[0_1px_0_0_rgba(255,255,255,0.06)_inset]
         ${glow ? "shadow-[0_0_40px_-12px_rgba(16,185,129,0.35)]" : ""}

@@ -258,7 +258,7 @@ export default function DashboardPage() {
                               transition={{
                                 duration: 0.8,
                                 delay: i * 0.05,
-                                ease: [0.22, 1, 0.36, 1],
+                                ease: [0.22, 1, 0.36, 1] as const,
                               }}
                               className={`h-full rounded-full ${over ? "bg-rose-400" : "bg-gradient-to-r from-emerald-400 to-emerald-500"}`}
                             />
