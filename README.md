@@ -75,3 +75,12 @@ src/
 | Variable | Description |
 |---|---|
 | `NEXT_PUBLIC_API_URL` | Base URL of the backend API |
+
+## 📝 Design Decisions
+
+This project intentionally deviates from the generic listing/details spec in two places, given the nature of the data:
+
+- **Transaction listing uses a table, not a card grid.** Financial transaction data (title, category, date, amount) is inherently tabular and is best scanned as rows — matching common patterns in finance apps (bank statements, expense trackers). A 4-column card grid would hide key columns and make comparing amounts/dates harder.
+- **Transaction Details page is authenticated, not public.** Each transaction contains a specific user's private financial data (amounts, descriptions, receipts). Making this page publicly accessible (as a generic "product details" page would be) would expose personal financial information to anyone with the link, which is not appropriate for a finance app.
+
+Both decisions prioritize good UX and data privacy for the domain over generic template compliance.
