@@ -31,13 +31,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body suppressHydrationWarning className="min-h-screen flex flex-col bg-slate-900 text-slate-50">
+      <body
+        suppressHydrationWarning
+        className="min-h-screen flex flex-col bg-slate-950 text-slate-50"
+      >
         <Providers>
           <AuthProvider>
             <Navbar />
-            <div className="flex-grow flex flex-col">
-              {children}
-            </div>
+            <div className="flex-grow flex flex-col">{children}</div>
             <Footer />
           </AuthProvider>
         </Providers>

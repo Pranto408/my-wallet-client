@@ -306,7 +306,7 @@ export default function DashboardPage() {
                             borderRadius: 10,
                             fontSize: 12,
                           }}
-                          formatter={(v: number) => `$${v.toFixed(2)}`}
+                          formatter={(v) => `$${Number(v ?? 0).toFixed(2)}`}
                         />
                       </PieChart>
                     </ResponsiveContainer>
